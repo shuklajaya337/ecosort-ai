@@ -158,13 +158,16 @@ def classify():
 
     # 3. Ultimate fallback if model fails
     if result is None:
+        import os
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        files_in_dir = os.listdir(base_dir) if os.path.exists(base_dir) else []
         result = {
             'item': item_name,
             'category': 'General Waste',
             'bin': 'General Waste Bin',
             'recyclable': 'No',
             'color': '#7f8c8d',
-            'tips': 'Item could not be classified. Please consult local recycling authorities.',
+            'tips': f"Debug Info: base_dir={base_dir}, files={files_in_dir}, dataset_exists={os.path.exists(os.path.join(base_dir, 'dataset.csv'))}",
             'method': 'Fallback'
         }
 
