@@ -83,6 +83,8 @@ def load_resources():
         except Exception as e:
             print(f"Could not train model dynamically: {e}")
 
+load_resources()
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -166,5 +168,4 @@ def classify():
     return jsonify(result)
 
 if __name__ == '__main__':
-    load_resources()
     app.run(debug=True, port=5000)
