@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSort AI - Intelligent Waste Segregation </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark-theme">
+    <div class="glass-bg"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-area">
+                <span class="logo-icon">🌱</span>
+                <div>
+                    <h1>EcoSort <span class="gradient-text">AI</span></h1>
+                    <p class="tagline">Intelligent Waste Segregation Guide</p>
+                </div>
+            </div>
+            <div class="theme-switch-wrapper">
+                <span class="theme-icon">☀️</span>
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" checked />
+                    <div class="slider round"></div>
+                </label>
+                <span class="theme-icon">🌙</span>
+            </div>
+        </header>
+
+        <!-- Main Grid Layout -->
+        <main class="dashboard-grid">
+            
+            <!-- Left Side: Search & AI Prediction -->
+            <section class="search-section card">
+                <h2>Analyze Waste Item</h2>
+                <p class="section-desc">Type any item name to get instant AI classification, bin recommendations, and recyclability status.</p>
+                
+                <form id="classify-form" autocomplete="off">
+                    <div class="input-wrapper">
+                        <input type="text" id="item-input" placeholder="e.g. plastic bottle, apple core, smartphone..." required>
+                        <button type="submit" id="submit-btn">
+                            <span class="btn-text">Classify</span>
+                            <span class="spinner" style="display: none;"></span>
+                        </button>
+                        <div id="autocomplete-list" class="autocomplete-items"></div>
+                    </div>
+                </form>
+
+                <!-- Results Display Panel (hidden by default) -->
+                <div id="result-panel" class="result-panel" style="display: none;">
+                    <div class="result-header">
+                        <h3 id="result-item-name">Plastic Bottle</h3>
+                        <span id="classification-method" class="method-badge">AI Predicted</span>
+                    </div>
+                    
+                    <div class="result-grid">
+                        <div class="result-metric">
+                            <span class="metric-label">Category</span>
+                            <span id="result-category" class="metric-value">Plastic Waste</span>
+                        </div>
+                        <div class="result-metric">
+                            <span class="metric-label">Disposal Bin</span>
+                            <span id="result-bin" class="metric-value badge-bin">Blue Bin</span>
+                        </div>
+                        <div class="result-metric">
+                            <span class="metric-label">Recyclable</span>
+                            <span id="result-recyclable" class="metric-value badge-recyclable">Yes</span>
+                        </div>
+                    </div>
+
+                    <div class="tips-box">
+                        <h4>🌱 Environmental Guidance & Tips</h4>
+                        <p id="result-tips">Rinse containers to remove food residue. Check local codes, but most rigid plastics are highly recyclable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Side: Stats & SDG Alignment -->
+            <section class="info-section card">
+                <h2>AI for Sustainability</h2>
+                <p class="section-desc">Aligning waste management practices with United Nations Sustainable Development Goals.</p>
+                
+                <div class="sdg-badges">
+                    <div class="sdg-badge goal-12">
+                        <span class="sdg-num">12</span>
+                        <span class="sdg-title">Responsible Consumption</span>
+                    </div>
+                    <div class="sdg-badge goal-11">
+                        <span class="sdg-num">11</span>
+                        <span class="sdg-title">Sustainable Cities</span>
+                    </div>
+                    <div class="sdg-badge goal-13">
+                        <span class="sdg-num">13</span>
+                        <span class="sdg-title">Climate Action</span>
+                    </div>
+                </div>
+
+                <div class="impact-metrics">
+                    <div class="metric-card">
+                        <h3>90%</h3>
+                        <p>Recycling Accuracy</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>50%</h3>
+                        <p>Less Landfill Waste</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Educational Reference Section -->
+        <section class="reference-section card">
+            <h2>Waste Categories Guide</h2>
+            <p class="section-desc">A reference guide for the 7 primary waste categories used by EcoSort AI classification.</p>
+            
+            <div class="category-grid">
+                <div class="cat-card organic">
+                    <div class="cat-header">
+                        <span class="cat-icon">🍎</span>
+                        <h3>Organic Waste</h3>
+                    </div>
+                    <p>Biodegradable organic matter from food, lawns, and plants.</p>
+                    <div class="cat-tags">
+                        <span>Green Bin</span>
+                        <span>Non-Recyclable</span>
+                    </div>
+                </div>
+                
+                <div class="cat-card plastic">
+                    <div class="cat-header">
+                        <span class="cat-icon">🥤</span>
+                        <h3>Plastic Waste</h3>
+                    </div>
+                    <p>Rigid bottles, jugs, wrappers, and containers.</p>
+                    <div class="cat-tags">
+                        <span>Blue Bin</span>
+                        <span>Recyclable</span>
+                    </div>
+                </div>
+
+                <div class="cat-card paper">
+                    <div class="cat-header">
+                        <span class="cat-icon">📦</span>
+                        <h3>Paper Waste</h3>
+                    </div>
+                    <p>Cardboard, newspapers, office documents, and envelopes.</p>
+                    <div class="cat-tags">
+                        <span>Blue Bin</span>
+                        <span>Recyclable</span>
+                    </div>
+                </div>
+
+                <div class="cat-card glass">
+                    <div class="cat-header">
+                        <span class="cat-icon">🍾</span>
+                        <h3>Glass Waste</h3>
+                    </div>
+                    <p>Glass bottles, jars, and other food/beverage glass containers.</p>
+                    <div class="cat-tags">
+                        <span>Glass Bin</span>
+                        <span>Recyclable</span>
+                    </div>
+                </div>
+
+                <div class="cat-card metal">
+                    <div class="cat-header">
+                        <span class="cat-icon">🥫</span>
+                        <h3>Metal Waste</h3>
+                    </div>
+                    <p>Aluminum beverage cans, tin food cans, foil, and scrap iron.</p>
+                    <div class="cat-tags">
+                        <span>Blue Bin</span>
+                        <span>Recyclable</span>
+                    </div>
+                </div>
+
+                <div class="cat-card electronic">
+                    <div class="cat-header">
+                        <span class="cat-icon">💻</span>
+                        <h3>Electronic Waste</h3>
+                    </div>
+                    <p>Phones, laptops, accessories, and appliances.</p>
+                    <div class="cat-tags">
+                        <span>E-Waste Depot</span>
+                        <span>Special Recycle</span>
+                    </div>
+                </div>
+
+                <div class="cat-card hazardous">
+                    <div class="cat-header">
+                        <span class="cat-icon">⚠️</span>
+                        <h3>Hazardous Waste</h3>
+                    </div>
+                    <p>Batteries, lightbulbs, paint cans, and medical items.</p>
+                    <div class="cat-tags">
+                        <span>Hazardous Depot</span>
+                        <span>Non-Recyclable</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>EcoSort AI © 2026. Made with 💚 using Python, Pandas & Scikit-Learn.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

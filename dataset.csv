@@ -1,0 +1,103 @@
+Item,Category,Bin,Recyclable
+apple core,Organic Waste,Green Bin,No
+banana peel,Organic Waste,Green Bin,No
+eggshells,Organic Waste,Green Bin,No
+coffee grounds,Organic Waste,Green Bin,No
+tea bag,Organic Waste,Green Bin,No
+leftover food,Organic Waste,Green Bin,No
+orange peel,Organic Waste,Green Bin,No
+bread crusts,Organic Waste,Green Bin,No
+vegetable scraps,Organic Waste,Green Bin,No
+lawn clippings,Organic Waste,Green Bin,No
+dead leaves,Organic Waste,Green Bin,No
+wilted flowers,Organic Waste,Green Bin,No
+chicken bones,Organic Waste,Green Bin,No
+potato skin,Organic Waste,Green Bin,No
+pizza crust,Organic Waste,Green Bin,No
+plastic bottle,Plastic Waste,Blue Bin,Yes
+plastic cup,Plastic Waste,Blue Bin,Yes
+yogurt container,Plastic Waste,Blue Bin,Yes
+milk jug,Plastic Waste,Blue Bin,Yes
+shampoo bottle,Plastic Waste,Blue Bin,Yes
+plastic bag,Plastic Waste,Blue Bin,Yes
+bubble wrap,Plastic Waste,Blue Bin,Yes
+plastic wrapper,Plastic Waste,Blue Bin,No
+plastic straw,Plastic Waste,Blue Bin,No
+plastic fork,Plastic Waste,Blue Bin,No
+detergent bottle,Plastic Waste,Blue Bin,Yes
+water bottle,Plastic Waste,Blue Bin,Yes
+plastic bucket,Plastic Waste,Blue Bin,Yes
+soda bottle,Plastic Waste,Blue Bin,Yes
+cardboard box,Paper Waste,Blue Bin,Yes
+newspaper,Paper Waste,Blue Bin,Yes
+office paper,Paper Waste,Blue Bin,Yes
+envelope,Paper Waste,Blue Bin,Yes
+paper bag,Paper Waste,Blue Bin,Yes
+notebook,Paper Waste,Blue Bin,Yes
+magazine,Paper Waste,Blue Bin,Yes
+cardboard tube,Paper Waste,Blue Bin,Yes
+cereal box,Paper Waste,Blue Bin,Yes
+paper cup,Paper Waste,Blue Bin,No
+junk mail,Paper Waste,Blue Bin,Yes
+paperback book,Paper Waste,Blue Bin,Yes
+shredded paper,Paper Waste,Blue Bin,Yes
+glass bottle,Glass Waste,Blue Bin,Yes
+glass jar,Glass Waste,Blue Bin,Yes
+wine bottle,Glass Waste,Blue Bin,Yes
+beer bottle,Glass Waste,Glass Bin,Yes
+broken glass,Glass Waste,Glass Bin,No
+glass cup,Glass Waste,Blue Bin,Yes
+glass bowl,Glass Waste,Blue Bin,Yes
+perfume bottle,Glass Waste,Blue Bin,Yes
+soda can,Metal Waste,Blue Bin,Yes
+tin can,Metal Waste,Blue Bin,Yes
+soup can,Metal Waste,Blue Bin,Yes
+aluminum foil,Metal Waste,Blue Bin,Yes
+steel key,Metal Waste,Blue Bin,Yes
+iron nail,Metal Waste,Blue Bin,Yes
+copper wire,Metal Waste,Blue Bin,Yes
+metal spoon,Metal Waste,Blue Bin,Yes
+metal fork,Metal Waste,Blue Bin,Yes
+brass padlock,Metal Waste,Blue Bin,Yes
+smartphone,Electronic Waste,E-Waste Bin,Yes
+laptop,Electronic Waste,E-Waste Bin,Yes
+charging cable,Electronic Waste,E-Waste Bin,Yes
+keyboard,Electronic Waste,E-Waste Bin,Yes
+mouse,Electronic Waste,E-Waste Bin,Yes
+alkaline battery,Hazardous Waste,Hazardous Bin,No
+fluorescent bulb,Hazardous Waste,Hazardous Bin,No
+paint can,Hazardous Waste,Hazardous Bin,No
+pesticide bottle,Hazardous Waste,Hazardous Bin,No
+motor oil container,Hazardous Waste,Hazardous Bin,No
+medical syringe,Hazardous Waste,Hazardous Bin,No
+expired medicine,Hazardous Waste,Hazardous Bin,No
+aerosol spray can,Hazardous Waste,Hazardous Bin,No
+thermometer,Hazardous Waste,Hazardous Bin,No
+bleach bottle,Hazardous Waste,Hazardous Bin,No
+old television,Electronic Waste,E-Waste Bin,Yes
+headphone,Electronic Waste,E-Waste Bin,Yes
+tablet,Electronic Waste,E-Waste Bin,Yes
+computer monitor,Electronic Waste,E-Waste Bin,Yes
+printer cartridge,Electronic Waste,E-Waste Bin,Yes
+lithium battery,Hazardous Waste,Hazardous Bin,No
+car battery,Hazardous Waste,Hazardous Bin,No
+house key,Metal Waste,Blue Bin,Yes
+soda bottle cap,Plastic Waste,Blue Bin,Yes
+food tray,Plastic Waste,Blue Bin,Yes
+paper plate,Organic Waste,Green Bin,No
+napkin,Organic Waste,Green Bin,No
+tissue paper,Organic Waste,Green Bin,No
+wood scrap,Organic Waste,Green Bin,No
+potting soil,Organic Waste,Green Bin,No
+window glass,Glass Waste,Glass Bin,No
+mirror glass,Glass Waste,Glass Bin,No
+metal pipe,Metal Waste,Blue Bin,Yes
+screws,Metal Waste,Blue Bin,Yes
+paper envelope,Paper Waste,Blue Bin,Yes
+wrapping paper,Paper Waste,Blue Bin,Yes
+usb drive,Electronic Waste,E-Waste Bin,Yes
+calculator,Electronic Waste,E-Waste Bin,Yes
+remote control,Electronic Waste,E-Waste Bin,Yes
+acid container,Hazardous Waste,Hazardous Bin,No
+insecticide spray,Hazardous Waste,Hazardous Bin,No
+led bulb,Electronic Waste,E-Waste Bin,Yes
