@@ -57,22 +57,25 @@ model = None
 
 def load_resources():
     global df, model
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    dataset_path = os.path.join(base_dir, 'dataset.csv')
+    model_path = os.path.join(base_dir, 'classifier_model.pkl')
+    
     # Load dataset
-    dataset_path = 'dataset.csv'
     if os.path.exists(dataset_path):
         df = pd.read_csv(dataset_path)
         df['Item_Lower'] = df['Item'].str.lower()
+        print("Dataset loaded successfully.")
     else:
         print(f"Warning: {dataset_path} not found.")
 
     # Load ML Model
-    model_path = 'classifier_model.pkl'
     if os.path.exists(model_path):
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
         print("Classifier model loaded successfully.")
     else:
-        print("Warning: classifier_model.pkl not found. Running training script...")
+        print(f"Warning: {model_path} not found. Running training script...")
         try:
             import train_model
             train_model.train_model()

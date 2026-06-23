@@ -9,7 +9,10 @@ def train_model():
     print("Training EcoSort AI waste classifier...")
     
     # Check if dataset exists
-    dataset_path = 'dataset.csv'
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    dataset_path = os.path.join(base_dir, 'dataset.csv')
+    model_path = os.path.join(base_dir, 'classifier_model.pkl')
+    
     if not os.path.exists(dataset_path):
         print(f"Error: {dataset_path} not found. Please run this in the correct folder.")
         return
@@ -38,10 +41,10 @@ def train_model():
     print("Model trained successfully.")
 
     # Save model and mapping details
-    with open('classifier_model.pkl', 'wb') as f:
+    with open(model_path, 'wb') as f:
         pickle.dump(model, f)
     
-    print("Saved classifier_model.pkl")
+    print(f"Saved classifier_model.pkl at {model_path}")
 
 if __name__ == '__main__':
     train_model()
